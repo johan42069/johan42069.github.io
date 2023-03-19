@@ -3,26 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mandelbrot Set Interactive</title>
+  <title>Johan Rondestvedt's Website</title>
   <style>
+    body {
+      margin: 0;
+      background-color: black;
+    }
     canvas {
-      display: block;
-      margin: auto;
-      border: 1px solid black;
-      cursor: crosshair;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      z-index: 1;
     }
     #controls {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
       display: flex;
-      justify-content: center;
-      margin-top: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      border-radius: 5px;
+      z-index: 1;
     }
-    #controls input {
+    #controls input, #controls button {
       margin-left: 10px;
     }
   </style>
 </head>
 <body>
-  <canvas id="mandelbrotCanvas" width="800" height="800"></canvas>
+  <header>Johan Rondestvedt's Website</header>
+  <canvas id="mandelbrotCanvas"></canvas>
   <div id="controls">
     <label for="iterations">Iterations:</label>
     <input type="number" id="iterations" min="1" value="256">
