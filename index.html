@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html>
-
-<head> 
-    <link rel="stylesheet" href="app.css"/>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mandelbrot Set Interactive</title>
+  <style>
+    canvas {
+      display: block;
+      margin: auto;
+      border: 1px solid black;
+      cursor: crosshair;
+    }
+    #controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    #controls input {
+      margin-left: 10px;
+    }
+  </style>
 </head>
 <body>
-
-    <div style="padding-top:75.000%;position:relative;"><iframe src="https://gifer.com/embed/2kXk" width="50%" height="50%" style='position:absolute;top:0;left:0;' frameBorder="0" allowFullScreen></iframe></div><p><a href="https://gifer.com"></a></p>
-
+  <canvas id="mandelbrotCanvas" width="800" height="800"></canvas>
+  <div id="controls">
+    <label for="iterations">Iterations:</label>
+    <input type="number" id="iterations" min="1" value="256">
+    <button id="reset">Reset</button>
+  </div>
+  <script src="mandelbrot.js"></script>
 </body>
-
-<h1>
-    "johan"
-
-</h1>
-
-
-<button onClick="alertButton()">
-    press her
-</button>
-
-
-
-<script src="app.js"></script>
-
 </html>
-
