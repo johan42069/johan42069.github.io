@@ -49,3 +49,15 @@ resetButton.addEventListener('click', () => {
   ymax = 1.5;
   resizeCanvas();
 });
+
+// ... (resten av koden forblir uendret)
+
+function initialize() {
+  resizeCanvas();
+  drawMandelbrot(xmin, xmax, ymin, ymax, maxIter, canvas);
+}
+
+// Eksporter initialize-funksjonen for å kunne kalle den fra HTML-filen
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { initialize };
+}
